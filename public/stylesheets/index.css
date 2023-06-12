@@ -1,0 +1,49 @@
+body {
+  background-color: #f6efee;
+}
+
+.navbar,
+.footer {
+  background-color: #f6efee;
+}
+
+.navbar.scrolled {
+  background: white;
+  transition: background 500ms;
+  border-bottom: black;
+}
+
+.cluster-map {
+  width: 100%;
+  height: 400px;
+}
+
+/* #mainNavbar .nav-link:hover {
+  border-bottom: 1px solid black;
+} */
+
+#mainNavbar .nav-link,
+.navbar-brand {
+  color: black;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid black;
+  padding: 4px;
+  transition: padding 200ms;
+}
+
+.asterisk {
+  color: red;
+  margin: 2px;
+  font-size: 20px;
+}
+
+.isHidden {
+  display: none;
+}
+
+.showMap {
+  width: 100%;
+  height: 400px;
+}

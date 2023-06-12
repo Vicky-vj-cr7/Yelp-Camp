@@ -1,0 +1,87 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="card" style="width: 25rem">
+    <div class="card-body">
+      <h5 class="card-title display-6" style="text-align: center; font-family:serif">Add new location</h5>
+      <form
+        action="/campgrounds"
+        method="POST"
+        novalidate
+        class="validated-form"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label class="form-label" for="title">Title</label>
+          <input
+            class="form-control"
+            type="text"
+            id="title"
+            name="campground[title]"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="location">Location</label>
+          <input
+            class="form-control"
+            type="text"
+            id="location"
+            name="campground[location]"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="mb-3 custom-file">
+          <em>*Image size should not exceed 2MB</em><br />
+          <label for="image" class="form-label"></label>
+          <label class="form-label custom-file-label"></label>
+          <input
+            class="form-control custom-file-input"
+            type="file"
+            name="image"
+            id="image"
+            accept=".png,.jpg,.jpeg,image/jpeg"
+            multiple
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="price"
+            >Expenses (approx.)</label
+          >
+          <div class="input-group">
+            <span class="input-group-text" id="price-label">₹</span>
+            <input
+              type="text"
+              class="form-control"
+              id="price"
+              placeholder="0.00"
+              aria-label="price"
+              aria-describedby="price-label"
+              name="campground[price]"
+              required
+            />
+          </div>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="description">Description</label>
+          <textarea
+            class="form-control"
+            type="text"
+            id="description"
+            name="campground[description]"
+            required
+          ></textarea>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-success">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
